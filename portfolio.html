@@ -18,35 +18,45 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="header__header-border">
       <div class="header container">
-        <nav class="nav-header">
-          <div class="header-logo">
+        <nav class="header__navigation">
+          <div class="logo--header-position">
             <a lang="en" href="./index.html" class="logo"
-              >Web<span class="header-studio-logo">Studio</span></a
+              >Web<span class="logo--black">Studio</span></a
             >
           </div>
-          <ul class="nav-list">
-            <li><a href="./index.html" class="link">Студія</a></li>
-            <li><a href="#" class="link current">Портфоліо</a></li>
-            <li><a href="#" class="link">Контакти</a></li>
+          <ul class="header__navigation-list">
+            <li class="header__navigation-item">
+              <a href="./index.html" class="header__navigation-link">Студія</a>
+            </li>
+            <li class="header__navigation-item">
+              <a href="./portfolio.html" class="header__navigation-link current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="header__navigation-item">
+              <a href="#" class="header__navigation-link">Контакти</a>
+            </li>
           </ul>
         </nav>
-        <ul class="header-contacts">
-          <li>
-            <a href="mailto:info@devstudio.com" class="header-link"
-              ><svg class="icon-link" width="16" height="12">
+        <ul class="header__contact-info">
+          <li class="header__contact-item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="header__contact-item-link"
+            >
+              <svg class="header__contact-item-icon" width="16" height="12">
                 <use href="./images/symbol-defs2.svg#icon-envelope1"></use></svg
               >info@devstudio.com</a
             >
           </li>
-          <li>
-            <a href="tel:+380961111111" class="header-link">
-              <svg class="icon-link" width="10" height="16">
-                <use
-                  href="./images/symbol-defs2.svg#icon-smartphone"
-                ></use></svg
-              >+38 096 111 11 11</a
+          <li class="header__contact-item">
+            <a href="tel:+380961111111" class="header__contact-item-link">
+              <svg class="header__contact-item-icon" width="10" height="16">
+                <use href="./images/symbol-defs2.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
