@@ -51,6 +51,33 @@ ul {
 }
 
 
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-black-color);
+    margin-bottom: 50px;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
 
 /* logo block */
 
@@ -88,6 +115,8 @@ ul {
 }
 
 
+
+
 /* header block */
 .header {
     display: flex;
@@ -97,7 +126,7 @@ ul {
 
 .header__header-border {
     border-bottom: 1px solid var(--header-border-line);
-    /* align-items: center; */
+
 }
 
 
@@ -120,20 +149,10 @@ ul {
 
 }
 
-.header__contact-info {
-    display: flex;
-
-}
-
-.header__contact-item:not(:first-child) {
-    margin-left: 50px;
-
-}
-
-
 .header__navigation-link.current {
     position: relative;
     color: var(--main-blue-color);
+
 }
 
 .header__navigation-link {
@@ -165,6 +184,16 @@ ul {
     height: 4px;
     border-radius: 2px;
     background-color: var(--main-blue-color);
+
+}
+
+.header__contact-info {
+    display: flex;
+
+}
+
+.header__contact-item:not(:first-child) {
+    margin-left: 50px;
 
 }
 
@@ -208,7 +237,7 @@ ul {
     background-repeat: no-repeat;
 }
 
-.main-heading {
+.hero__heading {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -223,7 +252,7 @@ ul {
     max-width: 696px;
 }
 
-.hero-btn {
+.hero__btn {
     background-color: var(--main-blue-color);
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -243,42 +272,38 @@ ul {
     min-width: 216px;
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.hero-btn:active {
+.hero__btn:active {
     background-color: #188CE8;
 }
 
-/* section особливості */
-.hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
 
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
 
-.properties {
+/* features */
+
+
+
+
+.features {
 
     padding: 94px 0 94px 0;
 
 }
 
-.property-list {
+.features__list {
     display: flex;
     gap: 30px;
 }
 
-.property-icon {
+.features__item {
+    max-width: 270px;
+}
+
+.features__icon {
     display: flex;
     width: 270px;
     height: 120px;
@@ -288,11 +313,7 @@ ul {
     margin-bottom: 30px;
 }
 
-.property-item {
-    max-width: 270px;
-}
-
-.property-title {
+.features__title {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -304,49 +325,37 @@ ul {
     margin-bottom: 10px;
 }
 
-.property-dscr {
+.features__dscr {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
 /* section Чим ми займаємося */
-.whatwedo-section {
+
+
+.whatwedo {
     padding-top: 0;
     padding-bottom: 94px;
 
 }
 
-.title {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.166;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-black-color);
-    margin-bottom: 50px;
-}
-
-
-
-.whatwedo-list {
+.whatwedo__list {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-.whatwedo-dscr-wrap {
+.whatwedo__dscr-wrap {
     position: relative;
 }
 
-.whatwedo-list img {
+.whatwedo__picture {
     display: block;
 
 }
 
-.whatwedo-dscr {
+.whatwedo__dscr {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -366,34 +375,37 @@ ul {
 }
 
 /* section Наша команда */
-.ourteam-section {
+
+
+
+.ourteam {
     padding: 94px 0 94px 0;
     background-color: var(--ourteam-background-color);
 }
 
 
 
-.ourteam-list {
+.ourteam__list {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 
 }
 
-.ourteam-item {
+.ourteam__item {
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 0px 0px 4px 4px;
 
 }
 
-.ourteam-item img {
+.ourteam__picture {
     display: block;
     margin-bottom: 30px;
 }
 
 
-.name {
+.ourteam__member-name {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -405,7 +417,7 @@ ul {
     margin-bottom: 10px;
 }
 
-.position {
+.ourteam__member-position {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
@@ -413,7 +425,7 @@ ul {
     margin-bottom: 16px;
 }
 
-.card-list {
+.ourteam__card-list {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -421,16 +433,12 @@ ul {
 }
 
 
-.card-list-item {
+.ourteam__card-list-item {
     width: 44px;
     height: 44px;
 }
 
-.card-link {
-    fill: currentColor;
-}
-
-.card-link {
+.ourteam__card-item-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,16 +447,22 @@ ul {
     color: #AFB1B8;
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: currentColor;
 }
 
-.card-link:hover,
-.card-link:focus {
+.ourteam__card-item-link:hover,
+.ourteam__card-item-link:focus {
     background-color: var(--main-blue-color);
     color: var(--main-white-coloor);
 
 }
 
+
+
 /* our clients */
+
+
+
 .our-clients {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -615,7 +629,6 @@ ul {
     background-color: var(--footer-hero-background-color);
     color: var(--main-white-coloor);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    ;
 
 }
 
@@ -834,7 +847,6 @@ ul {
 }
 
 
-
 .modal form {
     display: flex;
     flex-direction: column;
@@ -863,8 +875,6 @@ ul {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
-
-
 
 
 }
@@ -920,8 +930,6 @@ ul {
 .modal-label input:focus {
     border-color: rgba(33, 150, 243, 1);
 }
-
-
 
 .input-wrap {
     position: relative;
