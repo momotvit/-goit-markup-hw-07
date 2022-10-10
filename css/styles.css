@@ -805,7 +805,7 @@ ul {
 /* modal */
 
 
-.backdrop {
+.modal__backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -814,6 +814,15 @@ ul {
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__backdrop.is-hidden .modal {
+    transform: translate(-50%, 100%);
+}
+
+.modal__backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal {
@@ -832,21 +841,7 @@ ul {
 }
 
 
-.modal form {
-    display: flex;
-    flex-direction: column;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, 100%);
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.btn-modal-close {
+.modal__btn-close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -864,17 +859,18 @@ ul {
 
 }
 
-.btn-modal-close svg {
+.modal__btn-close .modal__btn-close-x {
     fill: var(--logo-black-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-modal-close:hover svg,
-.btn-modal-close:focus svg {
+.modal__btn-close:hover .modal__btn-close-x,
+.modal__btn-close:focus .modal__btn-close-x {
     fill: var(--main-blue-color);
 }
 
-.modal-title {
+
+.modal__title {
     text-align: center;
     margin-bottom: 12px;
     font-family: 'Roboto', sans-serif;
@@ -885,13 +881,28 @@ ul {
     color: rgba(33, 33, 33, 1)
 }
 
-.modal-label>label {
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__label-wrap {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+}
+
+
+
+.modal__label {
     display: block;
     margin-bottom: 4px;
 
 }
 
-.modal-label input {
+.modal__input {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -912,15 +923,18 @@ ul {
 }
 
 
-.modal-label input:focus {
+
+
+
+.modal__input:focus {
     border-color: rgba(33, 150, 243, 1);
 }
 
-.input-wrap {
+.modal__input-wrap {
     position: relative;
 }
 
-.icon-input {
+.modal__input-icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -930,21 +944,14 @@ ul {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input:focus+.icon-input {
+.modal__input:focus+.modal__input-icon {
 
     fill: rgba(33, 150, 243, 1);
 }
 
-.modal-coment,
-.modal-label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
 
-}
 
-.zoom {
+.moodal__textarea {
     height: 120px;
     width: 100%;
     resize: none;
@@ -962,11 +969,11 @@ input:focus+.icon-input {
 
 }
 
-.zoom:focus {
+.moodal__textarea:focus {
     border-color: rgba(33, 150, 243, 1);
 }
 
-.zoom::placeholder {
+.moodal__textarea::placeholder {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -974,42 +981,10 @@ input:focus+.icon-input {
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 
-
 }
 
 
-
-.checkbox {
-    appearance: none;
-    position: absolute;
-
-}
-
-.icon {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    border-radius: 2px;
-
-    background-image: url(../images/Vector-use.svg);
-    margin-left: 13px;
-    margin-right: 7px;
-}
-
-.checkbox:focus+.icon {
-    outline: 2px solid rgba(24, 140, 232, 1);
-    ;
-}
-
-
-
-
-.checkbox:checked+.icon {
-    background-image: url(../images/icon-check-use.svg);
-
-}
-
-.checkbox-label {
+.modal__checkbox-label {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -1020,7 +995,41 @@ input:focus+.icon-input {
     height: 24px;
 }
 
-.input-link {
+
+
+.modal__checkbox {
+    appearance: none;
+    position: absolute;
+
+}
+
+.modal__checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+
+    background-image: url(../images/Vector-use.svg);
+    margin-left: 13px;
+    margin-right: 7px;
+}
+
+.modal__checkbox:focus+.modal__checkbox-icon {
+    outline: 2px solid rgba(24, 140, 232, 1);
+    ;
+}
+
+
+
+
+.modal__checkbox:checked+.modal__checkbox-icon {
+    background-image: url(../images/icon-check-use.svg);
+
+}
+
+
+
+.modal__condition-link {
     position: relative;
     display: block;
     margin-left: 4px;
@@ -1030,7 +1039,7 @@ input:focus+.icon-input {
 }
 
 
-.input-link:after {
+.modal__condition-link:after {
     content: '';
     position: absolute;
     display: inline-block;
@@ -1041,7 +1050,7 @@ input:focus+.icon-input {
     background-color: rgba(33, 150, 243, 1);
 }
 
-.modal-btn {
+.modal__accept-btn {
     margin: auto;
     padding: 0;
     display: flex;
@@ -1065,8 +1074,8 @@ input:focus+.icon-input {
 
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__accept-btn:hover,
+.modal__accept-btn:focus {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: rgba(24, 140, 232, 1);
 }
