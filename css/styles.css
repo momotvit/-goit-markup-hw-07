@@ -118,13 +118,15 @@ ul {
 
 
 /* header block */
+
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header__header-border {
+.header__border {
     border-bottom: 1px solid var(--header-border-line);
 
 }
@@ -504,7 +506,7 @@ ul {
 
 
 
-/* footer */
+/* footer block */
 
 
 
@@ -923,9 +925,6 @@ ul {
 }
 
 
-
-
-
 .modal__input:focus {
     border-color: rgba(33, 150, 243, 1);
 }
@@ -948,7 +947,6 @@ ul {
 
     fill: rgba(33, 150, 243, 1);
 }
-
 
 
 .moodal__textarea {
@@ -996,7 +994,6 @@ ul {
 }
 
 
-
 .modal__checkbox {
     appearance: none;
     position: absolute;
@@ -1020,13 +1017,10 @@ ul {
 }
 
 
-
-
 .modal__checkbox:checked+.modal__checkbox-icon {
     background-image: url(../images/icon-check-use.svg);
 
 }
-
 
 
 .modal__condition-link {
