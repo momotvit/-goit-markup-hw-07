@@ -189,7 +189,7 @@ ul {
 
 }
 
-.header__contact-info {
+.header__contact {
     display: flex;
 
 }
@@ -588,7 +588,7 @@ ul {
     background-color: var(--main-blue-color);
 }
 
-.footer__social-liist-icon {
+.footer__social-list-icon {
     fill: currentColor;
 }
 

@@ -1,22 +1,20 @@
 .footer {
-    background-color: var(--footer-hero-background-color);
+    background-color: $footer-hero-background-color;
     padding: 60px 0 60px 0;
+
+    &__items {
+        @include centredFlex(flex, baseline, none)
+    }
+
+    &__item:first-child {
+        margin-right: 95px;
+    }
+
+    &__item:last-child {
+        margin-left: auto;
+    }
 }
 
-.footer__items {
-    display: flex;
-
-    align-items: baseline;
-
-}
-
-.footer__item:first-child {
-    margin-right: 95px;
-}
-
-.footer__item:last-child {
-    margin-left: auto;
-}
 
 .footer__adress-list-item:not(:last-child) {
     margin-bottom: 10px;
@@ -28,16 +26,15 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--main-white-coloor);
+    color: $main-white-coloor;
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.footer__adress-item-link:hover,
-.footer__adress-item-link:focus {
-    color: var(--main-blue-color);
+    &:hover,
+    &:focus {
+        color: $main-blue-color;
+    }
 }
-
 
 .footer__suggestion {
     font-size: 14px;
@@ -49,41 +46,46 @@
 }
 
 .footer__social-list {
-    display: flex;
-    justify-content: flex-start;
+    @include centredFlex(flex, none, flex-start);
     gap: 10px;
-}
 
-.footer__social-list-item {
-    width: 44px;
-    height: 44px;
-}
+    &-icon {
+        fill: currentColor;
+    }
 
-.footer__social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-white-coloor);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #FFFFFF10;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    &-item {
+        width: 44px;
+        height: 44px;
+    }
 
-.footer__social-list-link:hover,
-.footer__social-list-link:focus {
-    background-color: var(--main-blue-color);
-}
+    &-link {
+        @include centredFlex(flex, center, center);
+        color: $main-white-coloor;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #FFFFFF10;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.footer__social-liist-icon {
-    fill: currentColor;
+        &:hover,
+        &:focus {
+            background-color: $main-blue-color;
+        }
+    }
 }
 
 .footer__signup-form {
     display: flex;
 }
 
+.ffooter__signup-form-input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
 
 
 .footer__signup-form-input {
@@ -103,26 +105,16 @@
     color: var(--main-white-coloor);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+        border-color: #2196F3;
+    }
+
 }
 
-.footer__signup-form-input:hover,
-.footer__signup-form-input:focus {
-    border-color: #2196F3;
-}
-
-.ffooter__signup-form-input::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
 
 .footer__submit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centredFlex(flex, center, center);
     min-width: 200px;
     min-height: 50px;
     padding: 0;
@@ -131,17 +123,28 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    border: 1px solid var(--main-blue-color);
+    border: 1px solid $main-blue-color;
     border-radius: 4px;
-    background-color: var(--main-blue-color);
-    color: var(--main-white-coloor);
+    background-color: $main-blue-color;
+    color: $main-white-coloor;
     gap: 10px;
     box-shadow: none;
     transition: shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
 }
 
-.footer__submit-btn:hover,
-.footer__submit-btn:focus {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+
+.logo--footer-position {
+    @extend .logo;
+    margin-bottom: 20px;
+}
+
+.logo--white {
+    color: $main-white-coloor;
 }
